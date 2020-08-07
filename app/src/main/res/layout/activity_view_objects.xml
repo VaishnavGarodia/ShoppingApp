@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bgf"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        tools:context=".ViewObjectsActivity">
+
+        <!--Top Bar-->
+
+        <!--Body-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="9dp"
+                android:onClick="logout"
+                android:src="@drawable/logoutb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/searchtwoone"
+                android:hint="Search Laptop"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/grey"
+
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bag"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="6dp"
+                android:onClick="viewOrders"
+                android:src="@drawable/shoppingbag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/editText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--whole scrollview inside here-->
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:onClick="newActivity"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <!--horizontal scroll 1-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/small">
+
+                    <TextView
+                        style="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="Categories"
+                        android:textStyle="bold"
+                        android:textColor="@color/textColor"
+                        android:textSize="28sp" />
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="83dp"
+                            android:layout_height="88dp"
+                            android:background="@drawable/white_circular_border"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="59dp"
+                                android:layout_height="49dp"
+                                android:src="@drawable/download"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small"
+                                >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Macbook"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="83dp"
+                            android:layout_height="88dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/white_circular_border"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="83dp"
+                                android:layout_height="49dp"
+                                android:src="@drawable/game"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gaming"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="10sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="83dp"
+                            android:layout_height="87dp"
+                            android:background="@drawable/white_circular_border"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="88dp"
+                                android:layout_height="49dp"
+                                android:src="@drawable/ultrabooklogo"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ultrabook"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="8sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="83dp"
+                            android:layout_height="87dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/white_circular_border"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="83dp"
+                                android:layout_height="49dp"
+                                android:src="@drawable/mouselogo"
+                                android:onClick="newActivity"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Accessories"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="8sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="83dp"
+                            android:layout_height="87dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/white_circular_border"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="83dp"
+                                android:layout_height="49dp"
+                                android:src="@drawable/tab"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tablets"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="11sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/small">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:text="New Arrival"
+                        android:textColor="@color/textColor"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="see all"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        android:onClick="newActivity"/>
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_circular_border"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="108dp"
+                                android:src="@drawable/dellxps"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dell XPS 15 9560"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="10sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="K 1,600,000"
+                                        android:textColor="@color/blue"
+                                        android:textSize="13sp" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_circular_border"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="108dp"
+                                android:src="@drawable/asus"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Asus Zephyrus"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="10sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="K 2,490,000"
+                                        android:textColor="@color/blue"
+                                        android:textSize="13sp" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_circular_border"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="108dp"
+                                android:src="@drawable/acerhelios"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Acer Helios 300"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="K 890,000"
+                                        android:textColor="@color/blue"
+                                        android:textSize="13sp" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <!--scrollview start here-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/small">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="6dp"
+                        android:text="Best Sellers"
+                        android:textStyle="bold"
+                        android:textColor="@color/textColor"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="see all"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"
+                        android:onClick="newActivity"/>
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_circular_border"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="108dp"
+                                android:src="@drawable/macairoriginal"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Macbook Pro"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="10sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="K 2,600,000"
+                                        android:textColor="@color/blue"
+                                        android:textSize="13sp" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_circular_border"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="108dp"
+                                android:src="@drawable/legion"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Legion Gaming"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="10sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="K 1,490,000"
+                                        android:textColor="@color/blue"
+                                        android:textSize="13sp" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_circular_border"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="108dp"
+                                android:src="@drawable/razer"
+                                android:onClick="newActivity"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/small"
+                                android:paddingRight="@dimen/small">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Razor Blade Stealth"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="K 1,075,765"
+                                    android:textColor="@color/blue"
+                                    android:textSize="13sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical">
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <!--scrollview complete here-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
